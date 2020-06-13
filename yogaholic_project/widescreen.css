@@ -1,0 +1,158 @@
+body{
+    
+}
+
+.back-image{
+    background-image:url(top.jpeg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:30rem;
+    padding:2rem;
+
+}
+
+.button-1{
+    float:right;
+    display:inline block;
+    margin-top: 0.4rem; 
+     
+}
+
+
+
+.text-white{
+
+    font-size:60px;
+    font-family: serif; 
+    display:inline block;
+    
+
+}
+.heading-primary{
+    color:#fff;
+    text-transform: uppercase;
+  
+  }
+  .heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight:400;
+    letter-spacing:8px;
+    animation-name: moveinleft;
+    animation-duration: 2s;
+  }
+
+  .heading-primary-sub{
+    display:block;
+    font-size:30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    width: max-content;
+    animation-duration: 2s;
+    animation-name: moveinright;
+  }
+  /* demo style */
+  .animate{
+    position: absolute;
+    top:21%;
+    left:38%;
+    transform: (-50%,-50%);
+    
+  }
+
+  @keyframes moveinleft {
+
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    
+    80%{
+      opacity: 0.7;
+      transform: translateX(2%);
+    }
+
+    100%{
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  @keyframes moveinright{
+
+    0%{
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    
+    80%{
+      opacity: 0.7;
+      transform: translateX(-2%);
+    }
+
+    100%{
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+  }
+
+  @keyframes moveinbottom {
+
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    80%{
+      opacity: 0.7;
+      transform: translateY(-2%);
+    }
+    
+    100%{
+      opacity:1;
+      transform: translateY(0%);
+    }
+  }
+
+
+
+
+
+  .discover:link,
+  .discover:active{
+    display: inline-block;
+    background-color: #fff;
+    text-decoration: none;
+    height:3rem;
+    width:9rem;
+    border-radius: 100px;
+    text-justify: distribute;
+    padding-inline: 2.1rem;
+    padding-top: 0.7rem;
+    margin-top: 2.7rem;
+    margin-left: 8rem;
+    animation-name:moveinbottom;
+    animation-duration: 1s;
+    transform: all .4s;
+     animation-delay:1.8s;
+    
+    animation-fill-mode: backwards;
+  }
+  .discover:hover{
+    transform: translateY(-2px);
+  }
+
+  .discover:active{
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  }
+
+  .discover:hover::after{
+    transform:scale(1.5);
+    opacity:0;
+  }

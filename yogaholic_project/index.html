@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <title>yoga</title>
+    
+    <style>
+
+      .box {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 300px;
+        height: 400px;
+      }
+      .box-contents {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+       
+        box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+        transition: .5s ease;
+      }
+      .hover-point {
+        position: absolute;
+        z-index: 2;
+        width: calc(100% / 3);
+        height: calc(100% / 3);
+      }
+      .hover-point:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+      .hover-point:nth-child(2) {
+        top: 0;
+        left: calc(100% / 3);
+      }
+      .hover-point:nth-child(3) {
+        top: 0;
+        right: 0;
+      }
+      .hover-point:nth-child(4) {
+        top: calc(100% / 3);
+        left: 0;
+      }
+      .hover-point:nth-child(5) {
+        top: calc(100% / 3);
+        right: 0;
+      }
+      .hover-point:nth-child(6) {
+        bottom: 0;
+        left: 0;
+      }
+      .hover-point:nth-child(7) {
+        bottom: 0;
+        left: calc(100% / 3);
+      }
+      .hover-point:nth-child(8) {
+        bottom: 0;
+        right: 0;
+      }
+      .hover-point:nth-child(1):hover ~ .box-contents {
+        box-shadow: 15px 15px 50px rgba(0, 0, 0, .3);
+        transform-origin: right top;
+        transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
+      }
+      .hover-point:nth-child(2):hover ~ .box-contents {
+        box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
+        transform-origin: center top;
+        transform: perspective(1000px) rotateX(10deg);
+      }
+      .hover-point:nth-child(3):hover ~ .box-contents {
+        box-shadow: -15px 15px 50px rgba(0, 0, 0, .3);
+        transform-origin: left top;
+        transform: perspective(1000px) rotateX(10deg) rotateY(10deg) rotateZ(-2deg);
+      }
+      .hover-point:nth-child(4):hover ~ .box-contents {
+        box-shadow: 15px 5px 50px rgba(0, 0, 0, .3);
+        transform-origin: left center;
+        transform: perspective(1000px) rotateY(-10deg);
+      }
+      .hover-point:nth-child(5):hover ~ .box-contents {
+        box-shadow: -15px 5px 50px rgba(0, 0, 0, .3);
+        transform-origin: right center;
+        transform: perspective(1000px) rotateY(10deg);
+      }
+      .hover-point:nth-child(6):hover ~ .box-contents {
+        box-shadow: 15px -15px 50px rgba(0, 0, 0, .3);
+        transform-origin: right bottom;
+        transform: perspective(1000px) rotateX(-10deg) rotateY(-10deg) rotateZ(-2deg);
+      }
+      .hover-point:nth-child(7):hover ~ .box-contents {
+        box-shadow: 0 -15px 50px rgba(0, 0, 0, .3);
+        transform-origin: center bottom;
+        transform: perspective(1000px) rotateX(-10deg);
+      }
+      .hover-point:nth-child(8):hover ~ .box-contents {
+        box-shadow: -15px -15px 50px rgba(0, 0, 0, .3);
+        transform-origin: left bottom;
+        transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
+      }
+      /*   transition heading   */
+      
+      </style>
+      <style>
+        
+      </style>
+      
+  </head>
+<body>
+<div class="back-image">
+  <a href="login.html"><button class="btn btn-primary btn-lg button-1">Login</button></a>
+  <h1 class="text-white"><i class="fa fa-hacker-news" aria-hidden="true "></i> Yogaholic</h1>
+  <div class="animate">
+    <div class="heading-primary">
+      <span class="heading-primary-main">Experience</span>
+      <span class="heading-primary-sub">The World Around You</span>
+      <a class="discover" href="#">discover</a>
+    </div>
+
+  </div>
+
+  
+</div>
+
+
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+  <centre> <div class="collapse navbar-collapse " id="navbarNav">
+    <ul class="navbar-nav" style="text-align: center;">
+      <li class="nav-item active">
+        <a class="nav-link" href="yoga.html">Home <span class="sr-only">(current)</span></a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item active">
+        <a class="nav-link" href="blogs.php">Blogs</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item active">
+        <a class="nav-link" href="about.php">About</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item active">
+        <a class="nav-link " href="contact.php" >Contact</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;
+    </ul>
+  </div></centre>
+  </nav>
+</div>
+
+<div class="container">
+  <div style="text-align: center;">
+  <div style= "margin-top: 4rem; font-family:kepler-std-display,serif;">
+    <h1><strong>YOGA</strong></h1>
+  <div style="font-family:arial;" class="">
+  yoga is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India. 
+  Yoga is one of the six Āstika (orthodox) schools of Hindu philosophical traditions.Yoga in Indian traditions, however, 
+  is more than physical exercise; it has a meditative and spiritual core.[18][19] One of the six major orthodox schools of Hinduism is also called Yoga.
+  </div>
+</div>
+<br>
+
+<div class="card-panel" style="margin: inherit; padding: 2rem;display:flexbox;">
+  <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" style="display:block;">
+      <div class="carousel-item active" data-interval="4000">
+        <img src="yoga1.jpg" style="max-width:100%;" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item" data-interval="4000">
+        <img src="yoga2.jpg" style=" max-width:100%;" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item" data-interval="4000">
+        <img src="yoga3.jpg" style="max-width:100%;" class="d-block w-100 img-fluid" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div style="font-family:arial;" class="container mt-5">
+  The spiritual sense of the word yoga first arises in Epic Sanskrit, in the second half of the 1st millennium BCE, 
+  and is associated with the philosophical system presented in the Yoga Sutras of Patanjali,
+   with the chief aim of "uniting" the human spirit with the Divine spirit.
+</div>
+
+</div>
+<hr>
+
+<div class="nav" style="background-color:black;">
+  <div class=""></div>
+</div>
+
+<div class="container" style="padding:1rem;">
+  <div class="row">
+   <div class=" p-3 mb-5 rounded">
+    <div class="col-sm p-3">
+      <div class="box">
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="box-contents" style="padding:1rem;">
+            <img src="say1.jpg" class="img-fluid"><p style="word-wrap:break-word;padding:1rem;" class="text-justify mt-2">“If you ask a tree how he feels to know that he's spreading his fragrance and making people happy, I don't think a tree looks at it that way<br>― Sadguru</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" p-3 mb-5 rounded">
+    <div class="col-sm p-3">
+      <div class="box">
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="box-contents" style="padding:1rem;">
+            <img src="say2.jpg" class="img-fluid"><p style="word-wrap:break-word;padding:1rem;" class="text-justify mt-2">“*Our Living and going both must be legendary. live proudly and with self-knowledge, not cowardly.<br>― Swami Ramdev</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class=" p-3 mb-5 rounded">
+    <div class="col-sm p-3">
+      <div class="box">
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="hover-point"></div>
+        <div class="box-contents" style="padding:1rem;">
+            <img src="say3.jpg" class="img-fluid"><p style="word-wrap:break-word;padding:1rem;" class="text-justify mt-2"> All that we are is the result of what we have thought. The mind is everything. What we think, we become.<br>
+              ― Maharishi Mahesh Yogi </p>
+        </div>
+      </div>
+  </div>
+    
+    </div>
+  </div>
+
+</div>
+</div>
+<hr>
+<div class="container mt-6" style="font-family:kepler-std-display,serif; text-align: center;">
+  <h1><strong>What is Yogaholic</strong></h1>
+    <div style="font-family:arial;" class="container mt-2">
+    Yogaholic is a website for the blogger that are interested to express their ideas to the world on behalf on yoga and its advantages on their daily lives. So fell free to express your ideas on yoga and let the world know more about yoga from you. 
+    </div>   
+</div> 
+    <br>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12 content-area">
+            <div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-stretch-content="true" style="min-height: 18px; border-top: 10px solid rgb(226, 72, 134); border-bottom: 4px solid rgb(226, 72, 134); position: relative; left: -2px; box-sizing: border-box; width:100%;" class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
+            </div>
+          </div>
+      </div>
+    
+
+    </div>
+  </div>
+
+<div class="container" style="max-width: 1246px;">
+  <div class="row mt-5 text-center " style="margin-left:0rem; padding:0rem; ">
+    <div class="col-sm ">
+      <img class="img-responsive mt-4" src="https://ttdemo2.wpengine.com/yogax/wp-content/uploads/sites/4/2017/01/yogax_services_meditation.png" alt="Meditation">
+      <h5 class="ttbase-class-item-subtitle mt-4" style="color:black;text-transform: uppercase;font-weight:50;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        health-mind         						
+        </h5>
+        <h3 style="color: rgb(226, 72, 134)"> Meditation </h3> 
+      <p >	Meditation is a practice where an individual uses a technique  such as mind- fulness or focusing the mind	on a specific object or thing</p>
+   
+    </div>
+    <div class="col-sm">
+      <img class="img-responsive mt-4" src="https://ttdemo2.wpengine.com/yogax/wp-content/uploads/sites/4/2017/01/yogax_services_yoga.png" alt="Yoga">
+      <h5 class="ttbase-class-item-subtitle mt-4" style="color:black;text-transform: uppercase;font-weight:50;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        mind-balance         							</h5>
+      <h3 class="ttbase-class-item-heading" style="color: rgb(226, 72, 134)">
+        Yoga        							</h3>
+        <p>Definition of balance of mind. : emotional equilibrium sanity had taken her life when her balance of mind was disturbed.
+    </div>
+    <div class="col-sm">
+      <img class="img-responsive mt-4" src="https://ttdemo2.wpengine.com/yogax/wp-content/uploads/sites/4/2017/01/yogax_services_pilates.png" alt="Pilates">
+      <h5 class="ttbase-class-item-subtitle  mt-4 style="color:black;text-transform: uppercase;font-weight:50;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        body-strength         							</h5>
+      <h3 class="ttbase-class-item-heading" style="color: rgb(226, 72, 134)">
+        Pilates        							</h3>
+        <p> ability of a person or animal to exert force on physical objects using muscles. Increasing physical strength is the goal of strength training</p>
+    </div>
+    </div>     
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="noo-vc-row row  bg-image mt-5" style=" margin-right: 0px;text-overflow:hidden;background-image: url(http://wp.nootheme.com/yogi/wp-content/uploads/2015/04/member-ship-bg.jpg); padding-top: 20px; padding-bottom: 20px;">
+  <div class="noo-vc-col text-center col-md-12 "><hr class="noo-gap"><style scoped="">#noo-cta-btn-4 > a.btn:hover {  color: #ffffff; }</style>
+  <div id="noo-cta-btn-4" class="jumbotron noo-cta-btn text-center">
+  <h2 class="cta-title">Join our yogaholic community</h2>
+  <p class="cta-message">express and explore more about yoga</p>
+  <a href=""><a href="login.html" class="btn metro btn-default" style=" color: #ffffff; background-color: #2a2a2a; padding-left:  70px; padding-right:  70px;" role="button">
+  Sign up now
+  </a></a>
+  </div><hr class="noo-gap"></div>
+  </div>
+
+
+  <div class="" style="background-image:url(bottom.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;padding:2rem;opacity:1;width:100%;">
+    <div class="row mt-5" style="margin-top:3rem;">
+      <div class="col-sm"><div class="mt-4" style="color:white;text-transform:uppercase; text-center;" >
+        <p>&copy; Yogaholic designing <br> &nbsp;&nbsp;&nbsp;&nbsp;community <br> &nbsp;&nbsp;&nbsp;&nbsp;all right reserved </p>
+      </div></div>
+    
+    
+    <div class="col-sm">
+      <div class="mt-4" style="color:white;text-transform:uppercase; text-center;" >&nbsp;&nbsp;&nbsp;navigation<br><br>
+      <ul>
+      <a href="index.html" style="text-decoration:none;color:white;" ><li>home</li></a>
+      <a href="blogs.php" style="text-decoration:none;color:white;"> <li>blogs </li></a>
+      <a href="about.php" style="text-decoration:none;color:white;"> <li>about</li></a>
+      <a href="contact.php" style="text-decoration:none;color:white;"> <li>contact</li></a>
+      
+      </ul>
+      </div>
+    </div>
+    <div class="col-sm"><div class="mt-4" style="color:white;text-transform:uppercase;" > for any suggestions and feedback you can connect us through the following platforms<br>
+    whatsapp:+1(567)244-1535<br>
+    mail us: <a href="https://www.nikhilmishra2608@gmail.com" style="text-transform:lowercase;text-decoration:none;color:white;">nikhilmishra2608@gmail.com</a> 
+    </div>
+    </div>
+
+
+</div>
+
+<div class="footer text-white text-center" style="margin-top:5rem;">
+    &copy; designed by <span>||</span>  code wizard
+<div>
+ 
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
