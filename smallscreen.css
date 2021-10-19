@@ -1,0 +1,265 @@
+body{
+    text-overflow: hidden;
+}
+
+.back-image{
+    background-image:url(top.jpeg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:30rem;
+    padding:2rem;
+
+}
+
+.button-1{
+    float:right;
+    display:inline block;
+    margin-top:- 0.6rem; 
+     
+}
+
+.btn, .btn-lg {
+    font-size: 1.15rem;
+    height: 2.5rem;
+}
+
+.yogaholic{
+    display:inline;
+    margin-left:0.4rem;
+}
+
+.yogaholic-icon{
+    font-size:40px;
+}
+
+.animate{
+  text-align:center;
+}
+
+.text-white{
+
+    font-size:30px;
+    font-family: serif; 
+    display:inline block;
+    
+
+}
+.heading-primary{
+  margin-top:5rem;
+    color:#fff;
+    text-transform: uppercase;
+  
+  }
+  .heading-primary-main{
+    display: block;
+    font-size: 40px;
+    font-weight:400;
+    letter-spacing:8px;
+    animation-name: moveinleft;
+    animation-duration: 2.5s;
+  }
+
+  .heading-primary-sub{
+    display:block;
+    font-size:20px;
+    text-align:center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    width: 100%;
+    animation-duration: 2.5s;
+    animation-name: moveinright;
+  }
+
+  @keyframes moveinleft {
+
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    
+    80%{
+      opacity: 0.7;
+      transform: translateX(2%);
+    }
+
+    100%{
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  @keyframes moveinright{
+
+    0%{
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    
+    80%{
+      opacity: 0.7;
+      transform: translateX(-2%);
+    }
+
+    100%{
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+  }
+
+  @keyframes moveinbottom {
+
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    80%{
+      opacity: 0.7;
+      transform: translateY(-2%);
+    }
+    
+    100%{
+      opacity:1;
+      transform: translateY(0%);
+    }
+  }
+
+
+
+
+
+  .discover:link,
+  .discover:active{
+    display: inline-block;
+    background-color: #fff;
+    text-decoration: none;
+    height:3rem;
+    
+    border-radius: 100px;
+    text-justify: distribute;
+    padding-inline: 2.1rem;
+    padding-top: 0.7rem;
+    margin-top: 2.7rem;
+    
+    animation-name:moveinbottom;
+    animation-duration: 1.5s;
+    transform: all .4s;
+     animation-delay:2.1s;
+    
+    animation-fill-mode: backwards;
+  }
+  .discover:hover{
+    transform: translateY(-2px);
+  }
+
+  .discover:active{
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  }
+
+  .discover:hover::after{
+    transform:scale(1.5);
+    opacity:0;
+  } 
+
+  
+.text-main{
+  font-family:arial;
+  font-size: 1rem;
+}
+
+.carousel-yoga{
+  height: 15rem;
+} 
+
+.carousel-inner{
+  height: 21vh;
+}
+
+
+.hoverable-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yoga-benifits{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.container-1{
+  display: flex;
+ flex-direction:column ;
+ align-items: center;
+
+}
+
+.container-2{
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+}
+
+.container-3{
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+}
+
+
+
+/* /////////////////////////////about page///////////////////////////// */
+
+.heading-about{
+
+  font-size:35px; 
+  text-transform:uppercase; 
+  font-weight:bold; 
+  padding:1rem;
+}
+
+
+.quote-about{
+  font-size:19px;
+  text-transform:none; 
+  margin-bottom:2rem;
+
+}
+
+
+.portfolio{
+  display: flex;
+  background-color:rgb(244, 127, 10);
+  padding: 5rem;
+  flex-direction:column;
+  align-items: center;
+}
+
+
+.self-img{
+  background-image: url(my.jpg);
+  background-repeat: no-repeat;
+  background-size: 264px 301px;
+  background-position: initial;
+  width: 34vh;
+  height: 20rem;
+
+ 
+}
+
+.about-text{
+  display: flex;
+  text-align:justify;
+  font-weight: 600;
+}

@@ -1,0 +1,248 @@
+body{
+    
+}
+
+.back-image{
+  
+    background-image:url(top.jpeg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:30rem;
+    padding:2rem;
+
+}
+
+.button-1{
+    float:right;
+    display:inline block;
+    margin-top: 0.4rem; 
+     
+}
+
+
+
+.text-white{
+
+    font-size:60px;
+    font-family: serif; 
+    display:inline block;
+    
+
+}
+.heading-primary{
+    margin: 0 auto;
+    color:#fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  
+  }
+  .heading-primary-main{
+    margin: 0 auto;
+    font-size: 60px;
+    font-weight:400;
+    letter-spacing:9px;
+    animation-name: moveinleft;
+    animation-duration: 2s;
+  }
+
+  .heading-primary-sub{
+    font-size:30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    animation-duration: 2s;
+    animation-name: moveinright;
+  }
+  /* demo style */
+  .animate{
+   margin-left: 2px auto;
+    transform: (-50%,-50%);
+    
+  }
+
+  @keyframes moveinleft {
+
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    
+    80%{
+      opacity: 0.7;
+      transform: translateX(2%);
+    }
+
+    100%{
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  @keyframes moveinright{
+
+    0%{
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    
+    80%{
+      opacity: 0.7;
+      transform: translateX(-2%);
+    }
+
+    100%{
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+  }
+
+  @keyframes moveinbottom {
+
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    80%{
+      opacity: 0.7;
+      transform: translateY(-2%);
+    }
+    
+    100%{
+      opacity:1;
+      transform: translateY(0%);
+    }
+  }
+
+
+
+
+
+  .discover:link,
+  .discover:active{
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    letter-spacing: 0.2rem;
+    padding: .8rem;
+    animation-name:moveinbottom;
+    animation-duration: 1s;
+    transform: all .4s;
+     animation-delay:1.8s;
+    margin-top: 2rem;
+    animation-fill-mode: backwards;
+  }
+  .discover:hover{
+    transform: translateY(-2px);
+  }
+
+  .discover:active{
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  }
+
+  .discover:hover::after{
+    transform:scale(1.5);
+    opacity:0;
+  }
+.carousel-inner{
+  height: 75vh;
+}
+
+.text-main{
+  font-family:arial;
+  font-size: 1.2rem;
+}
+
+.hoverable-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yoga-benifits{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  
+
+}
+
+.container-1{
+  display: flex;
+ flex-direction:column ;
+ align-items: center;
+  max-width: 25vw;
+  margin-right: 2rem;
+}
+
+.container-2{
+  display: flex;
+  flex-direction:column ;
+  max-width: 25vw;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.container-3{
+  display: flex;
+  flex-direction:column ;
+  max-width: 25vw;
+  align-items: center;
+}
+
+
+
+/* /////////////////////////////about page///////////////////////////// */
+
+.heading-about{
+  font-size:45px; 
+  text-transform:uppercase; 
+  font-weight:bold; 
+  padding:2rem;
+}
+
+.quote-about{
+  font-size:35px;
+  text-transform:none; 
+  margin-bottom:5rem;
+}
+
+.portfolio{
+  display: flex;
+  background-color:rgb(244, 127, 10);
+  padding: 5rem;
+}
+
+
+.self-img{
+  display:flex;
+  background-image: url(my.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 119vh;
+  width: 62vw;
+
+ 
+}
+
+.about-text{
+  display: flex;
+  width: 20vw;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: justify;
+  margin-top: 3rem;
+}
